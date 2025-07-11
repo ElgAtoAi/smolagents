@@ -18,34 +18,6 @@ This guide will show you how to use different model types with your agents.
 8. [`AzureOpenAIServerModel`]: Uses Azure's OpenAI service
 9. [`AmazonBedrockServerModel`]: Connects to AWS Bedrock's API
 
-## Using Google Gemini Models
-
-As explained in the Google Gemini API documentation (https://ai.google.dev/gemini-api/docs/openai),
-Google provides an OpenAI-compatible API for Gemini models, allowing you to use the [`OpenAIServerModel`]
-with Gemini models by setting the appropriate base URL.
-
-First, install the required dependencies:
-```bash
-pip install smolagents[openai]
-```
-
-Then, [get a Gemini API key](https://ai.google.dev/gemini-api/docs/api-key) and set it in your code:
-```python
-GEMINI_API_KEY = <YOUR-GEMINI-API-KEY>
-```
-
-Now, you can initialize the Gemini model using the `OpenAIServerModel` class
-and setting the `api_base` parameter to the Gemini API base URL:
-```python
-from smolagents import OpenAIServerModel
-
-model = OpenAIServerModel(
-    model_id="gemini-2.0-flash",
-    # Google Gemini OpenAI-compatible API base URL
-    api_base="https://generativelanguage.googleapis.com/v1beta/openai/",
-    api_key=GEMINI_API_KEY,
-)
-```
 
 ## Using OpenRouter Models
 
