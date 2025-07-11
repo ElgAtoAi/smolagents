@@ -275,3 +275,7 @@ If you use `smolagents` in your publication, please cite it by using the followi
   year =         {2025}
 }
 ```
+
+## Deploying to Cloudflare
+
+Run `npm install`, then `npm run zip` to build the frontend and package `deploy.zip`. Upload this ZIP via the Cloudflare Pages UI to deploy.
